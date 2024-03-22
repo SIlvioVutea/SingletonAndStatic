@@ -1,28 +1,33 @@
 import java.util.Optional;
 
 public class User {
-    private Optional<String> name;
-    private Optional<Integer> age;
+    private String name;
+    private Integer age;
+    private final static User instance = new User("Paolo", 15);
 
-    public User() {
-        this.name = Optional.empty();
-        this.age = Optional.empty();
+    public static User getInstance() {
+        return instance;
+    }
+
+    private User(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
-        return name.orElse("undefined");
+        return name;
     }
 
     public void setName(String name) {
-        this.name = Optional.of(name);
+        this.name = name;
     }
 
     public int getAge() {
-        return age.orElse(0);
+        return age;
     }
 
     public void setAge(int age) {
-        this.age = Optional.of(age);
+        this.age = age;
     }
 
     public static void printUser(User user) {
