@@ -5,8 +5,8 @@ public class Main {
 //    Del primo si stamperanno le informazioni di default, del secondo si cambieranno le informazioni e poi si stamperanno a video
     public static void main(String[] args) {
 
-        User user1 = new User("Paola", 21);
-        User user2 = new User("Chiara", 21);
+        User user1 = new User();
+        User user2 = new User();
 
         User.printUser(user1);
 

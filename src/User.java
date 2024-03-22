@@ -1,26 +1,28 @@
-public class User {
-    private String name;
-    private int age;
+import java.util.Optional;
 
-    public User(String name, int age) {
-        this.name = name;
-        this.age = age;
+public class User {
+    private Optional<String> name;
+    private Optional<Integer> age;
+
+    public User() {
+        this.name = Optional.empty();
+        this.age = Optional.empty();
     }
 
     public String getName() {
-        return name;
+        return name.orElse("undefined");
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = Optional.of(name);
     }
 
     public int getAge() {
-        return age;
+        return age.orElse(0);
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.age = Optional.of(age);
     }
 
     public static void printUser(User user) {
