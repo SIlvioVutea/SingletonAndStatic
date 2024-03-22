@@ -24,6 +24,6 @@ public class User {
     }
 
     public static void printUser(User user) {
-        System.out.println("name and age : " + user.getName() + " " + user.getAge());
+        System.out.println("name and age : " + user.getName() + ", " + user.getAge());
     }
 }
